@@ -1,0 +1,12 @@
+../xbox360/arkhamcity.png
+../xbox360/codblackops.png
+../xbox360/codblackops2.png
+../xbox360/codmodernwarfare2.png
+../xbox360/crysis3.jpg
+../xbox360/fable3.jpg
+../xbox360/halo3.jpg
+../xbox360/halo4.png
+../xbox360/haloreach.jpg
+../xbox360/mortalkombat.png
+../xbox360/mortalkombatvsdcuniverse.png
+../xbox360/needforspeedhotpursuit.jpg

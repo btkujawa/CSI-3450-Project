@@ -1,0 +1,13 @@
+../gc/kirbyairride.jpg
+../gc/marioparty6.jpg
+../gc/marioparty7.jpg
+../gc/mariopowertennis.jpg
+../gc/mariosunshine.jpg
+../gc/mariosuperstarbaseball.jpg
+../gc/papermariothethousandyeardoor.jpeg
+../gc/pikmin2.jpg
+../gc/pokemoncolosseum.jpg
+../gc/supermariostrikers.jpg
+../gc/supermonkeyball.jpg
+../gc/supersmashbrothersmelee.jpg
+../gc/thelegendofzeldathewindwaker.jpg

@@ -1,0 +1,12 @@
+../ps1/crashbandicoot.png
+../ps1/crashteamracing.png
+../ps1/donaldduckgoinquackers.jpeg
+../ps1/frogger.png
+../ps1/liloandstitchtroubleinparadise.jpg
+../ps1/nascar98.png
+../ps1/nascar99.png
+../ps1/persona.png
+../ps1/persona2.png
+../ps1/spyrothedragon.jpg
+../ps1/tombraider.jpg
+../ps1/tonyhawksproskater4.jpg

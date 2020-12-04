@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Fixedsys-Excelsior";
+  src: url("../fonts/FSEX300.ttf") format("truetype");
+}
+
+@-webkit-keyframes titleAnimation {}
+
+@keyframes titleAnimation {}@-webkit-keyframes backgroundAnimation {
+  0% {
+  }
+  100% {
+  }
+}@keyframes backgroundAnimation {
+  0% {
+  }
+  100% {
+  }
+}
+
+header h1 {
+  font-family: Fixedsys-Excelsior;
+  -webkit-animation-name: titleAnimation;
+          animation-name: titleAnimation;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: forward;
+          animation-direction: forward;
+  text-shadow: -5px -5px 2px red, -5px -5px 4px red, -5px -5px 6px red, -5px -5px 8px red, -5px -5px 10px red;
+}
+/*# sourceMappingURL=animations.css.map */

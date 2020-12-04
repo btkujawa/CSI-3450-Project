@@ -1,0 +1,31 @@
+@mixin font($font-family, $font-file)
+  @font-face
+    font-family: $font-family
+    src: url($font-file+'.ttf') format('truetype')
+@include font('Fixedsys-Excelsior', '../fonts/FSEX300')
+    
+
+@keyframes titleAnimation
+    
+@keyframes backgroundAnimation
+    0%       
+        
+    100%
+        
+body
+    // animation-name: backgroundAnimation
+    // animation-duration: 3s
+    // background-image: url(../images/games/xbox360/-cover),
+    // background-repeat: no-repeat
+    // background-attachment: fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed
+    // background-position: 100% 25%, 67% 36%, 70% 0%, 100% 100%, 100% 69%, 100% 0%, 0% 100%, 50% 100%, 35% 0%, 0% 40%, 40% 50%, 0% 0%, 0% 100%
+    // background-size: 25%, 25%, 25%, 25%, 25%, 25%, 40%, 50%, 35%, 25%, 40%, 25%, 25%
+
+header    
+    h1
+        font-family: Fixedsys-Excelsior
+        animation-name: titleAnimation
+        animation-duration: 10s
+        animation-iteration-count: infinite
+        animation-direction: forward        
+        text-shadow: -5px -5px 2px red, -5px -5px 4px red, -5px -5px 6px red, -5px -5px 8px red, -5px -5px 10px red
