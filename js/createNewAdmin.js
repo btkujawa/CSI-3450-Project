@@ -1,4 +1,4 @@
-function createNewUser() {
+function createNewAdmin() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -14,7 +14,7 @@ function createNewUser() {
     } else if (user_password == "") {
         document.getElementById("user_type_label").innerHTML = "Please select a user type";
     } else {
-        xhttp.open("POST", "/php/databaseinterface/createNewUser.php", true);
+        xhttp.open("POST", "/php/databaseinterface/createNewAdmin.php", true);
         xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhttp.send("&user_name=" + user_name + "&user_password=" + user_password + "&user_type=" + user_type);
     }

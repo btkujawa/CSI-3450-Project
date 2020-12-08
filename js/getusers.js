@@ -2,10 +2,19 @@ function updateTable(tableId, jsonData) {
     var table = document.getElementById(tableId);
     for (var i = 0; i< jsonData.user_list.length; i++) {
         var row = table.insertRow();
-        usernameCell = row.insertCell(0);
-        userTypeCell = row.insertCell(1);
+        selectedUser = row.insertCell(0);
+        usernameCell = row.insertCell(1);
+        userTypeCell = row.insertCell(2);
         usernameCell.innerHTML = jsonData.user_list[i].username;
-        userTypeCell.innerHTML = jsonData.user_list[i].user_type;
+        if (jsonData.user_list[i].user_type == 0) {
+            userTypeCell.innerHTML = "Admin";
+        }
+        else if (jsonData.user_list[i].user_type == 2) {
+            userTypeCell.innerHTML = "Publisher";
+        }
+        else {
+            userTypeCell.innerHTML = "Standard User";
+        }
     }
 
 }
@@ -14,9 +23,7 @@ function getUsers() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
             var data = JSON.parse(this.responseText);
-            console.log(data);
             updateTable("usersTable", data);
         }
     };
