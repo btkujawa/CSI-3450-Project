@@ -6,16 +6,16 @@
     <?php include '/php/bootstrapIncludes.php'; ?>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="/js/getusers.js"></script>
+    <script src="/js/getPublishers.js"></script>
     <script src="/js/createNewGame.js"></script>
     <script src="/js/createNewUser.js"></script>
     <script src="/js/createPublisher.js"></script>
     <script src="/js/createNewAdmin.js"></script>
-    <script src="/js/publisherSearch.js"></script>
     <script src="/js/adminCreateUserTypeField.js"></script>
     <title>Admin Panel</title>
 </head>
 
-<body style="background-color: #261447;">
+<body style="background-color: #261447;" onload="getPublishers()"s>
     <?php include 'navbar.php'; ?>
     <main role="main" class="container d-flex flex-row flex-grow-1" style="margin-top: 10px; padding: 5px;">
         <div class="container" style="margin-top: 10px; padding: 5px;" id="adminGameEditorDiv">
@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Release date</label>
-                        <input type="text" class="form-control" id="release_date" placeholder="Release date" required style="background-color: #E6F2F8;">
+                        <input type="date" class="form-control" id="release_date" placeholder="Release date" required style="background-color: #E6F2F8;">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect2">Game rating</label>
@@ -42,42 +42,11 @@
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Publisher</label>
-                        <input type="text" class="form-control" id="publisherTableSearch" placeholder="Publisher" required style="background-color: #E6F2F8;">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Publisher Name</th>
-                                    <th>Headquarters</th>
-                                    <th>Est.</th>
-                                </tr>
-                            </thead>
-                            <tbody id="pubSelectTable">
-                                <tr>
-                                    <td>John</td>
-                                    <td>Doe</td>
-                                    <td>john@example.com</td>
-                                </tr>
-                                <tr>
-                                    <td>Mary</td>
-                                    <td>Moe</td>
-                                    <td>mary@mail.com</td>
-                                </tr>
-                                <tr>
-                                    <td>July</td>
-                                    <td>Dooley</td>
-                                    <td>july@greatstuff.com</td>
-                                </tr>
-                                <tr>
-                                    <td>Anja</td>
-                                    <td>Ravendale</td>
-                                    <td>a_r@test.com</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <select class="form-control" id="pubSelectList" required>
+                        </select>
                     </div>
                 </form>
                 <button class="btn btn-primary" role="button" id="createGameButton" onclick="createNewGame() " style="background-color: #2DE2E6; color: #261447">Create New Game</button>
-                <p id="createGame">test</p>
             </div>
         </div>
         <div class="container" style="margin-top: 10px; padding: 5px;" id="adminUserCreatorDiv">

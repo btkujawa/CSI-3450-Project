@@ -17,7 +17,7 @@ function userTypeSelected() {
         pubNameInput.setAttribute("type", "text");
         pubNameInput.setAttribute("placeholder", "Publisher name");
         pubDateLabel.innerHTML = "Date est.";
-        pubDateInput.setAttribute("type", "text");
+        pubDateInput.setAttribute("type", "date");
         pubDateInput.setAttribute("placeholder", "YYYY-MM-DD");
         pubHQLabel.innerHTML = "Publisher Headquarters";
         pubHQInput.setAttribute("type", "text");

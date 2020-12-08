@@ -29,4 +29,4 @@ function getUsers() {
     };
     xhttp.open("GET", "../php/databaseinterface/getAllUsers.php", true);
     xhttp.send();
-}
+} 
