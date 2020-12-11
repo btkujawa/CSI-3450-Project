@@ -2,7 +2,7 @@ function loginUser() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            //console.log(this.responseText);
+            console.log(this.responseText);
             var result = JSON.parse(this.responseText);
             if (result.success) {
                 window.location.assign("/php/userProfile.php");

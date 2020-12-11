@@ -32,7 +32,7 @@ session_start();
                             <label for="formGroupExampleInput2">Password</label>
                             <input type="password" class="form-control" id="user_password" placeholder="Password" required style="background-color: #E6F2F8;">
                         </div>
-                        <button class="btn btn-primary" type="button" role="button" id="createUserButton" onclick="loginUser() " style="background-color: #2DE2E6; color: #261447">Sign up</button>
+                        <button class="btn btn-primary" type="button" role="button" id="loginUserButton" onclick="loginUser() " style="background-color: #2DE2E6; color: #261447">Sign in</button>
                 </div>
                 <h3 class="h3 mb-3 font-weight-normal" id="createUserP"></h3>
             </div>

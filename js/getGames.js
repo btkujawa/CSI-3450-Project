@@ -20,11 +20,8 @@ function updateGamesTable(jsonData) {
         gameIDCell = row.insertCell(0);
         gamenameCell = row.insertCell(1);
         gameDateCell = row.insertCell(2);
-        gamePublisherCell = row.insertCell(3);
-        gamePlatformCell = row.insertCell(4);
-        gameRatingCell = row.insertCell(5);
-        gameStoresCell = row.insertCell(6);
-        removeButtonCell = row.insertCell(7);
+        gameRatingCell = row.insertCell(3);
+        removeButtonCell = row.insertCell(4);
         gamenameCell.innerHTML = jsonData.game_list[i].game_name;
         gameDateCell.innerHTML = jsonData.game_list[i].game_release_date;
         gameIDCell.innerHTML = jsonData.game_list[i].idGame;

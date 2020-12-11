@@ -19,11 +19,13 @@ session_start();
         <?php
         if (isset($_SESSION['username'])) {
             echo '<a class="nav-link" style="text-decoration: none; color: #FF6C11" href="/php/logout.php">Log out</a>';
+            echo '<a class="nav-link" href="./php/userProfile.php" style="color: #FF6C11">User Profile</a>';
         }
         else {
             echo '<a class="nav-link" style="text-decoration: none; color: #FF6C11" href="/php/loginPage.php">Sign in</a>';  
+            echo '<a class="nav-link" href="./php/accountCreation.php" style="color: #FF6C11">Sign up</a>';
+            echo '<a class="nav-link" href="./php/adminLoginPage.php" style="color: #FF6C11">Admin sign in</a>';
         }
-        ?>
-        <a class="nav-link" href="./php/accountCreation.php" style="color: #FF6C11">Sign up</a>
+        ?>        
     </div>
 </nav>

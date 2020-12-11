@@ -32,7 +32,7 @@ session_start();
 
 <body style="background-color: #261447;" onload="loadAdminPanel()">
     <?php include 'navbar.php'; ?>
-    <div class="container d-flex align-content-center flex-row flex-grow-1 rounded text-white-50 box-shadow" style="margin-top: 10px; padding: 5px; background-color: #7B9EBE;">
+    <div class="container d-flex align-content-center flex-row flex-grow-1 align-items-center rounded text-white-50 box-shadow" style="margin-top: 10px; padding: 5px; background-color: #7B9EBE;">
         <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" id="materialInline1" checked name="inlineMaterialRadiosExample" onclick="showCreateMenu()">
             <label class="form-check-label" for="materialInline1">Create</label>
@@ -43,7 +43,12 @@ session_start();
         </div>
     </div>
     <div class="container d-flex flex-column flex-grow-1" style="margin-top: 10px; padding: 5px;">
-        <main class="container d-flex flex-row flex-grow-1" id="adminCreatorDiv" style="margin-top: 10px; padding: 5px;">
+    <div class="container d-flex flex-row flex-grow-1" style="margin-top: 10px; padding: 5px;">
+    <?php if (isset($_SESSION['username'])) {
+                echo '<h1 style="color: #FF3864; font-family: Bungee-Regular;"> Welcome ' . $_SESSION['username'] . '</h1>';
+            } ?>
+            </div>
+        <main class="container d-flex flex-row flex-grow-1" id="adminCreatorDiv" style="margin-top: 10px; padding: 5px;">            
             <div class="container" style="margin-top: 10px; padding: 5px;" id="adminGameEditorDiv">
                 <div class="d-flex align-items-center flex-column flex-grow-1 text-white-50 rounded box-shadow p-3" style="background-color: #7B9EBE;">
                     <h4 style="font-family: Bungee-Regular;">Create Game</h4>
@@ -83,7 +88,7 @@ session_start();
                             </select>
                         </div>
                     </form>
-                    <button class="btn btn-primary m-2" role="button" id="createGameButton" onclick="createNewGame() " style="background-color: #2DE2E6; color: #261447">Create New Game</button>
+                    <button class="btn btn-primary m-2" id="createGameButton" onclick="createNewGame() " style="background-color: #2DE2E6; color: #261447">Create New Game</button>
                 </div>
             </div>
             <div class="container" style="margin-top: 10px; padding: 5px;" id="adminUserCreatorDiv">
@@ -218,10 +223,7 @@ session_start();
                                 <th>Game ID</th>
                                 <th>Game Name</th>
                                 <th>Release Date</th>
-                                <th>Game Publisher</th>
-                                <th>Game Platform</th>
                                 <th>Game Rating</th>
-                                <th>Game Stores</th>
                                 <th>Remove</th>
                             </tr>
                         </thead>
