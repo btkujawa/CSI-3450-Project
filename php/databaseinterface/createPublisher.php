@@ -3,7 +3,6 @@ include_once 'databaseconnect.php';
 if (array_key_exists('user_name', $_POST) && array_key_exists('user_password', $_POST) &&  array_key_exists('user_type', $_POST) &&  array_key_exists('publisher_name', $_POST) &&  array_key_exists('publisher_date_est', $_POST) &&  array_key_exists('publisher_hq', $_POST)) {
     $user_name = $_POST['user_name'];
     $user_password = $_POST['user_password'];
-    $user_password = hash('sha256', $user_password, false);
     $user_type = $_POST['user_type'];
 
     $publisher_name = $_POST['publisher_name'];

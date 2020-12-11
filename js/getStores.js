@@ -1,48 +1,40 @@
-function updatePubTable(tableId, jsonData) {
+function updateStoresTable(tableId, jsonData) {
     var table = document.getElementById(tableId);
-    for (var i = 0; i < jsonData.pub_list.length; i++) {
+    for (var i = 0; i < jsonData.stores_list.length; i++) {
         var option = document.createElement("option");
-        option.text = jsonData.pub_list[i].publisher_name;
+        option.text = jsonData.stores_list[i].store_name;
         var sel = table.options[table.selectedIndex];
         table.add(option, sel);
     }
     var option = document.createElement("option");
-    option.text = "Unknown";
     var sel = table.options[table.selectedIndex];
-    table.add(option, sel);
-    option = document.createElement("option");
     option.text = "None";
-    sel = table.options[table.selectedIndex];
     table.add(option, sel);
 }
 
-function updateEditGamePubTable(tableId, jsonData) {
+function updateEditGameStoresTable(tableId, jsonData) {
     var table = document.getElementById(tableId);
-    for (var i = 0; i < jsonData.pub_list.length; i++) {
+    for (var i = 0; i < jsonData.stores_list.length; i++) {
         var option = document.createElement("option");
-        option.text = jsonData.pub_list[i].publisher_name;
+        option.text = jsonData.stores_list[i].store_name;
         var sel = table.options[table.selectedIndex];
         table.add(option, sel);
     }
     var option = document.createElement("option");
-    option.text = "Unknown";
     var sel = table.options[table.selectedIndex];
-    table.add(option, sel);
-    option = document.createElement("option");
     option.text = "None";
-    sel = table.options[table.selectedIndex];
     table.add(option, sel);
 }
 
-function getPublishers() {
+function getStores() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var data = JSON.parse(this.responseText);
-            updatePubTable("pubSelectList", data);
-            updateEditGamePubTable("pubSelectList_edit", data);
+            updateStoresTable("storesAvailableSelectList", data);
+            updateEditGameStoresTable("storesAvailableSelectList_edit", data);
         }
     };
-    xhttp.open("GET", "../php/databaseinterface/getAllPublishers.php", true);
+    xhttp.open("GET", "../php/databaseinterface/getAllStores.php", true);
     xhttp.send();
 }

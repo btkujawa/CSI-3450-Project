@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -13,15 +13,17 @@
     </div>
     <div class=" d-flex justify-content-center flex-row flex-grow-1" id="centerNavbar">
         <div class="navbar-nav">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search" style="width: 100%;">
-                <button class="btn btn-outline-success" style="margin: -42px; color: #FF6C11"><span class="fas fa-search"></span></button>
-            </form>
         </div>
-        <a class="nav-link" href="#" style="text-decoration: none; color: #FF6C11"><span class="fas fa-bell"></span></a>
     </div>
     <div class=" d-flex justify-content-right" id="rightNavbar">
-        <a class="nav-link" style="text-decoration: none; color: #FF6C11" href="#">Sign in</a>
-        <a class="nav-link" style="text-decoration: none; color: #FF6C11" href="#">Settings</a>
+        <?php
+        if (isset($_SESSION['username'])) {
+            echo '<a class="nav-link" style="text-decoration: none; color: #FF6C11" href="/php/logout.php">Log out</a>';
+        }
+        else {
+            echo '<a class="nav-link" style="text-decoration: none; color: #FF6C11" href="/php/loginPage.php">Sign in</a>';  
+        }
+        ?>
+        <a class="nav-link" href="./php/accountCreation.php" style="color: #FF6C11">Sign up</a>
     </div>
 </nav>

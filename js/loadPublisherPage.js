@@ -1,0 +1,4 @@
+function loadPublisherPage() {
+    getPlatforms();
+    getStores();
+}
